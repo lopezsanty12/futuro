@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\CalCuenta;
-use App\Models\CalTipocuenta;
+use Illuminate\Support\Facades\DB;
 
 class CalCuentas extends Component
 {
@@ -18,6 +18,7 @@ class CalCuentas extends Component
     public function render()
     {
 		$keyWord = '%'.$this->keyWord .'%';
+        $tipo = DB::table('cal_tipocuentas')->whereNull('debaja')->get();
         return view('livewire.cuentas.view', [
             'cuentas' => CalCuenta::orderby('cal_cuentas.nombre')
                         ->join('cal_tipocuentas','cal_cuentas.tipocuentas','=','cal_tipocuentas.id')
@@ -29,9 +30,7 @@ class CalCuentas extends Component
                             ->orWhere('cal_cuentas.minimo', 'LIKE', $keyWord);
                             })
 						->paginate(10),
-            'tipo_cuenta' => CalTipocuenta::orderby('nombre')
-                        ->WhereNotNull('debaja')    
-                        ->get()             
+            'tipo_cuenta' => $tipo     
         ]);
     }
 	

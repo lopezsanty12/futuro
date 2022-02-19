@@ -17,15 +17,17 @@
             </div>
             <div class="form-group">
                 <label for="tipocuentas"></label>
-                <input wire:model="tipocuentas" type="text" class="form-control" id="tipocuentas" placeholder="Tipocuentas">@error('tipocuentas') <span class="error text-danger">{{ $message }}</span> @enderror
+                <select wire:model="tipocuentas" type="text" class="form-control" id="tipocuentas" placeholder="Tipocuentas">@error('tipocuentas') <span class="error text-danger">{{ $message }}</span> @enderror
+                    @foreach($tipo_cuenta as $tipocuenta)
+                    <option value = "{{$tipocuenta->id}}">
+                        {{$tipocuenta->nombre}}
+                    </option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="minimo"></label>
                 <input wire:model="minimo" type="text" class="form-control" id="minimo" placeholder="Minimo">@error('minimo') <span class="error text-danger">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
-                <label for="debaja"></label>
-                <input wire:model="debaja" type="text" class="form-control" id="debaja" placeholder="Debaja">@error('debaja') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

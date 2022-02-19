@@ -35,7 +35,6 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php dd($tipo_cuenta); ?>
 							@foreach($cuentas as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> 
