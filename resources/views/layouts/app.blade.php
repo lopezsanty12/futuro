@@ -37,13 +37,13 @@
                     <ul class="navbar-nav mr-auto">
 						<!--Nav Bar Hooks - Do not delete!!-->
 						<li class="nav-item">
+                            <a href="{{ url('/gen_personas') }}" class="nav-link"> Personas</a> 
+                        </li>
+						<li class="nav-item">
                             <a href="{{ url('/cal_cuentas') }}" class="nav-link">Cuentas</a> 
                         </li>
 						<li class="nav-item">
                             <a href="{{ url('/cal_tipocuentas') }}" class="nav-link">Tipos Cuentas</a> 
-                        </li>
-						<li class="nav-item">
-                            <a href="{{ url('/personas') }}" class="nav-link">Personas</a> 
                         </li>
 						<li class="nav-item">
                             <a href="{{ url('/bancos') }}" class="nav-link">Bancos</a> 

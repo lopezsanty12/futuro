@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Crear nueva persona</h5>
+                <h5 class="modal-title" id="createDataModalLabel">Crear persona</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true close-btn">×</span>
                 </button>
@@ -12,11 +12,11 @@
 				<form>
             <div class="form-group">
                 <label for="dpi"></label>
-                <input wire:model="dpi" type="text" class="form-control" id="dpi" placeholder="Dpi">@error('dpi') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="dpi" type="text" class="form-control" id="dpi" placeholder="DPI">@error('dpi') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="nit"></label>
-                <input wire:model="nit" type="text" class="form-control" id="nit" placeholder="Nit">@error('nit') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model="nit" type="text" class="form-control" id="nit" placeholder="NIT">@error('nit') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
             <div class="form-group">
                 <label for="nombres"></label>
@@ -25,6 +25,17 @@
             <div class="form-group">
                 <label for="apellidos"></label>
                 <input wire:model="apellidos" type="text" class="form-control" id="apellidos" placeholder="Apellidos">@error('apellidos') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
+            <div class="form-group">
+                <label for="id_cuenta"></label>
+                <select wire:model="id_cuenta" type="text" class="form-control" id="id_cuenta" placeholder="Cuenta">@error('id_cuenta') <span class="error text-danger">{{ $message }}</span> @enderror
+                    <option>Seleccione Cuenta</option>
+                    @foreach($cuentas as $cuenta)
+                    <option value = "{{$cuenta->id}}">
+                        {{$cuenta->nombre}}
+                    </option>
+                    @endforeach
+                </select>
             </div>
 
                 </form>

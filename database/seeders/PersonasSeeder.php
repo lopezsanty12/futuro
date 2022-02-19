@@ -14,12 +14,11 @@ class PersonasSeeder extends Seeder
      */
     public function run()
     {
-        // 'dpi','nit','nombres','apellidos',
-        \App\Models\Persona::create([
-            'dpi' => '2844-63337-1001',
-            'nit' => '8562869-7',
-            'nombres' => 'Santiago Ventura',
-            'apellidos' => "Lopez Ralac"
-        ]);
+    //     \App\Models\Persona::create([
+    //         'dpi' => '2844-63337-1001',
+    //         'nit' => '8562869-7',
+    //         'nombres' => 'Santiago Ventura',
+    //         'apellidos' => "Lopez Ralac"
+    //     ]);
     }
 }

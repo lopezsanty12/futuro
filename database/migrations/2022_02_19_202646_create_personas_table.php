@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('nit');
             $table->string('nombres');
             $table->string('apellidos');
+            $table->unsignedBigInteger('id_cuenta')->nullable();
+            $table->foreign('id_cuenta')->references('id')->on('cal_cuentas');
             $table->timestamp('debaja')->nullable();
         });
     }

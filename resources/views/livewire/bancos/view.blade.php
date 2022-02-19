@@ -12,10 +12,10 @@
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Search Bancos">
+							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Bancos">
 						</div>
-						<div class="btn btn-sm btn-info" data-toggle="modal" data-target="#createDataModal">
-						<i class="fa fa-plus"></i>  A&ntilde;adir Bancos
+						<div class="btn btn-success" data-toggle="modal" data-target="#createDataModal">
+						A&ntilde;adir Bancos
 						</div>
 					</div>
 				</div>
